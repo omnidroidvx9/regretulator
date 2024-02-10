@@ -21,7 +21,36 @@ jobs:
           source: .
           target: /var/www/legacy/regretulator
           rm: true  
+  execute-tests-in-chrome:
+    needs: upload-to-production-server
+    name: execute tests in Chrome
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Cypress.io         
         uses: cypress-io/github-action@v6.5.0
         with:                           
           browser: chrome
+  execute-tests-in-edge:
+    needs: upload-to-production-server
+    name: execute tests in Edge
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress.io         
+        uses: cypress-io/github-action@v6.5.0
+        with:                           
+          browser: edge
+  execute-tests-in-firefox:
+    needs: upload-to-production-server
+    name: execute tests in Firefox
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress.io         
+        uses: cypress-io/github-action@v6.5.0
+        with:                           
+          browser: firefox
