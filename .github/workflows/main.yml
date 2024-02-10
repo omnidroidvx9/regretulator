@@ -22,6 +22,7 @@ jobs:
           target: /var/www/legacy/regretulator
           rm: true
   execute-tests-in-chrome:
+    needs: upload-to-production-server
     name: Execute tests in chrome
     runs-on: ubuntu-latest
     steps:
