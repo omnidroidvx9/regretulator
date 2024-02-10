@@ -16,7 +16,7 @@ jobs:
         with:
           host: jason-baker.com
           username: jason
-          password: ${{ secrets.FTP_PASSWORD }}
+          password: ${{ secrets.PASSWORD }}
           port: 2999
           source: .
           target: /var/www/legacy/regretulator
