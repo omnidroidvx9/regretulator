@@ -1,0 +1,27 @@
+name: Upload to server and execute tests
+on: 
+  workflow_dispatch:
+  push:
+    branches: 
+    - main
+jobs:
+  upload-to-production-server:
+    name: Upload to production server
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: SCP Deployment        
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: jason-baker.com
+          username: jason
+          password: ${{ secrets.PASSWORD }}
+          port: 2999
+          source: .
+          target: /var/www/legacy/regretulator
+          rm: true  
+      - name: Cypress.io         
+        uses: cypress-io/github-action@v6.5.0
+        with:                           
+          browser: chrome
