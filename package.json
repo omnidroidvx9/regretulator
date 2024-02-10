@@ -1,0 +1,14 @@
+{
+  "name": "regretulator",
+  "version": "1.0.0",
+  "description": "The Regretulator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "runtests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  }
+}

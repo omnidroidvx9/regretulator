@@ -1,0 +1,199 @@
+* {		
+	color: #333333;
+	font-family: sans-serif;
+}
+
+a {
+	color: #dd4814;
+	text-decoration: none;
+}
+	
+article {	
+	display: block;
+	margin: 0 auto 40px auto;		
+	position: relative;	
+	scroll-margin-top: 40px;
+}
+
+body {
+	background-color:  #ffffff;  
+	margin: 0;
+	max-width: 100%;
+	padding: 0;		
+}	
+
+footer {
+	background-color: #333333;
+	clear: both;
+	color: #ffffff;
+	font-size: 11pt;
+	height: 280px;
+	margin: 10px 0 0 0;
+	min-width: 1200px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+footer a {
+	color: #999999;
+	text-decoration: none;
+}
+	
+
+footer > div {
+	display: none;
+	height: 280px;
+	margin: 0 auto 0 auto;	
+	padding: 0 20px;
+	position: relative;
+	width: 1200px;
+}
+
+footer > div > div {
+	float: left;
+	height: 220px;
+	margin: 20px 10px 10px 10px;	
+	width: 280px;
+}
+
+footer h3 {
+	color: #ffffff;
+	font-size: 12pt;
+	font-weight: bold;
+	margin: 0;
+}
+
+footer ul {
+	list-style: none;
+	margin: 5px 0 0 0;
+}
+
+footer li {
+	color: #888888;
+	font-size: 10pt;
+	margin-left: -40px;
+}
+
+footer a:hover {
+	color: #888888;
+	text-decoration: underline;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+h3 {
+	color: #333333;	
+	margin-bottom: 0;
+}
+
+header {
+	background-color: #029032; 			
+	display: block;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+header img {
+	display: block;
+	height: 40px;	
+	margin: 20px auto 20px auto;	
+}
+
+html {
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	display: block;
+}
+
+input, 
+select {	
+	box-sizing: border-box;
+	display: block;
+	border-radius: 0%;
+	border-width: 1px;
+	height: 30px;
+	min-height: 30px;
+	margin: 0 0 20px 0;
+	min-width: 100%;
+}
+
+input {		
+	padding: 5px;
+}
+
+button {
+	display: block;
+	border-width: 0;
+	height: 30px;
+	min-height: 30px;
+	background-color: #029032;;
+	color: #ffffff;
+	font-weight: bold;
+	min-width: 100%;
+}
+
+label {
+	font-weight: bold;
+	display: block;
+	margin: 0 0 20px 0;	
+}
+
+li {
+	line-height: 1.6em;
+}
+
+main {		
+	margin: 20px;
+	padding-top: 80px;
+	z-index: 0;	
+}
+
+p {	
+	line-height: 1.6em;
+}
+
+time {
+	color: #999999;
+	display: block;
+	font-size: smaller;	
+	left: 60px;
+	margin: 0;
+	position: absolute;	
+	top: 20px;	
+}
+
+#result {
+	color: #029032;
+	font-size: 36pt;
+}
+
+@media (min-width: 1200px) { 
+	article {	
+		display: block;
+		margin: 0 auto 40px auto;		
+		position: relative;
+		width: 1200px;
+	}
+
+	html {
+		min-height: 100%;
+		position: relative;
+		display: block;
+	}
+	
+	main {	
+		margin: 0 auto 20px auto;
+		min-width: 1200px;
+		padding: 100px 20px 120px 20px;
+		width: 1200px;
+		z-index: 0;
+	}
+}
+
