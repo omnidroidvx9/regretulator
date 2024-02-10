@@ -20,15 +20,11 @@ jobs:
           port: 2999
           source: .
           target: /var/www/legacy/regretulator
-          rm: true
-  execute-tests-in-chrome:
-    needs: upload-to-production-server
-    name: Execute tests in chrome
-    runs-on: ubuntu-latest
-    steps:
+          rm: true  
       - name: Cypress.io         
         uses: cypress-io/github-action@v6.5.0
         with:          
           record: false          
           auto-cancel-after-failures: false          
           browser: chrome
+          working-directory: regretulator
