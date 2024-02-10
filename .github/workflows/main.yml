@@ -27,4 +27,3 @@ jobs:
           record: false          
           auto-cancel-after-failures: false          
           browser: chrome
-          working-directory: regretulator
