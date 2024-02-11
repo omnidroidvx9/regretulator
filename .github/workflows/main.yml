@@ -18,7 +18,7 @@ jobs:
           username: jason
           password: ${{ secrets.PASSWORD }}
           port: 2999
-          source: .
+          source: ".,!.gitignore,!.github,!tests,!README.md"
           target: /var/www/legacy/regretulator
           rm: true  
   execute-tests-in-chrome:
