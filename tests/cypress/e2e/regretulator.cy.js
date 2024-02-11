@@ -1,15 +1,6 @@
-/// <reference types="cypress" />
+import Page from "../page-object-models/page.js"
 
-// Welcome to Cypress!
-//
-// This spec file contains a variety of sample tests
-// for a todo list app that are designed to demonstrate
-// the power of writing tests in Cypress.
-//
-// To learn more about how Cypress works and
-// what makes it such an awesome testing tool,
-// please read our getting started guide:
-// https://on.cypress.io/introduction-to-cypress
+const page = new Page()
 
 describe('example to-do app', () => {
   beforeEach(() => { 
@@ -24,11 +15,11 @@ describe('example to-do app', () => {
     const amount = 8000
     const expectedResult = '$50,531.10'
 
-    cy.get('#years').select(year)  
-    cy.get('[name=amount]').type(`${amount}`)
-    cy.get('button').click()
+    page.selectYear(year)  
+    page.enterAmount(`${amount}`)
+    page.clickSubmit()
 
-    cy.get('#result').should('have.text', expectedResult)
+    page.getResult().should('have.text', expectedResult)
   })
 })
 
