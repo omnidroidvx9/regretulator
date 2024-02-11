@@ -32,6 +32,7 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with:                           
           browser: chrome
+          project: ./tests
   execute-tests-in-edge:
     needs: upload-to-production-server
     name: Execute tests in Edge
@@ -43,6 +44,7 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with:                           
           browser: edge
+          project: ./tests
   execute-tests-in-firefox:
     needs: upload-to-production-server
     name: Execute tests in Firefox
@@ -54,3 +56,4 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with:                           
           browser: firefox
+          project: ./tests
