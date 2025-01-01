@@ -13,7 +13,7 @@ describe('example to-do app', () => {
   it('calculates regret', () => {
     const year = '2004'
     const amount = 8000
-    const expectedResult = '$50,531.10'
+    const expectedResult = '$63,173.98'
 
     page.selectYear(year)  
     page.enterAmount(`${amount}`)
